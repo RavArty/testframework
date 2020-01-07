@@ -15,5 +15,5 @@ it('should sum array', () => {
     total += value;
   });
 
-  assert.strictEqual(total, 7);
+  assert.strictEqual(total, 6);
 });
