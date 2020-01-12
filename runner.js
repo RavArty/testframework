@@ -20,12 +20,12 @@ class Runner {
       global.beforeEach = fn => {
         beforeEaches.push(fn);
       };
-      //share it var globally
+      //share it variable globally
       global.it = async (desc, fn) => {
         beforeEaches.forEach(func => func());
         try {
           await fn();
-          console.log(chalk.green(`\tOK = ${desc}`));
+          console.log(chalk.green(`\tOK - ${desc}`));
         } catch (err) {
           const message = err.message.replace(/\n/g, '\n\t\t');
           console.log(chalk.red(`\tX - ${desc}`));
