@@ -6,6 +6,6 @@ document.querySelector('form').addEventListener('submit', event => {
   if (value.includes('@')) {
     header.innerHTML = 'Looks good';
   } else {
-    header.innerHTML = 'Does not look good';
+    header.innerHTML = 'Please enter a valid email';
   }
 });
